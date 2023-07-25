@@ -36,8 +36,7 @@ class LoginScreen extends StatelessWidget {
 
               const LoginBtn(),
               kHeight30,
-              // SignUpTxtBtn(navigateTo: SizedBox()),
-              // kHeight60,
+
             ]),
       ),
     );

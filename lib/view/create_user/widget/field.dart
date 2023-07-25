@@ -24,6 +24,7 @@ Widget customField2({
           style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
         ),
         Container(
+          height: mHeight! / 16,
           decoration: BoxDecoration(
               color: white,
               borderRadius: BorderRadius.circular(16),

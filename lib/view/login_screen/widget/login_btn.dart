@@ -15,7 +15,7 @@ class LoginBtn extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(
-            height: 60,
+            height: mHeight! / 16,
             width: double.infinity,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(

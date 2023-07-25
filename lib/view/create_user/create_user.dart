@@ -107,7 +107,7 @@ class CreateUser extends StatelessWidget {
                 ],
               ),
               kHeight,
-              kHeight30,
+              kHeight40,
               Container(
                 height: 50,
                 margin: const EdgeInsets.all(12),

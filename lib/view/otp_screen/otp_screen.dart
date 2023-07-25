@@ -56,32 +56,17 @@ class OtpField extends StatelessWidget {
           color: grey,
         ),
       ),
-      height: 60,
-      width: 60,
+      height: mHeight! / 15,
+      width: mHeight! / 15,
       child: Center(
         child: Text(
           title,
           style: const TextStyle(
-            fontSize: 22,
+            fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
         ),
       ),
-      // child: TextField(
-      //   controller: otpController,
-      //   // readOnly: true,
-      //   style: Theme.of(context).textTheme.headline,
-      //   textAlign: TextAlign.center,
-      //   inputFormatters: [
-      //     LengthLimitingTextInputFormatter(1),
-      //     FilteringTextInputFormatter.digitsOnly
-      //   ],
-      //   decoration: const InputDecoration(
-      //     border: OutlineInputBorder(
-      //       borderSide: BorderSide.none,
-      //     ),
-      //   ),
-      // ),
     );
   }
 }

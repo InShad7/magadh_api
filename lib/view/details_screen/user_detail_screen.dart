@@ -28,7 +28,7 @@ class UserDetailsScreen extends StatelessWidget {
         ],
       ),
       body: SizedBox(
-        height: mHeight! / 1.8,
+        height: mHeight! / 1.7,
         width: mWidth,
         child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

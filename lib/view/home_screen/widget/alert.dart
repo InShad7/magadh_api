@@ -19,8 +19,8 @@ void alertBox({context, delete = false, date}) {
       children: [
         kHeight,
         SizedBox(
-          width: 400,
-          height: 70,
+          width: mWidth,
+          height: mHeight! / 17,
           child: TextButton(
             onPressed: () async {
               SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -42,8 +42,8 @@ void alertBox({context, delete = false, date}) {
         ),
         const Divider(indent: 60, endIndent: 60),
         SizedBox(
-          height: 65,
-          width: 400,
+          height: mHeight! / 17,
+          width: mWidth,
           child: TextButton(
             onPressed: () {
               Navigator.pop(context);

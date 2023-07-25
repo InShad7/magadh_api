@@ -25,7 +25,7 @@ class MyTextField extends StatelessWidget {
       padding: const EdgeInsets.only(left: 16.0, right: 16),
       child: Row(
         children: [
-          !verify ? Image.asset('assets/india.png', scale: 12) : SizedBox(),
+          !verify ? Image.asset('assets/india.png', scale: 12) : const SizedBox(),
           Expanded(
             child: Container(
               padding: const EdgeInsets.only(left: 12),

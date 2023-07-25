@@ -22,10 +22,11 @@ class HomeScreen extends StatelessWidget {
           if (snapshot.hasData) {
             final userData = snapshot.data!;
             return ListView.builder(
+              physics: const BouncingScrollPhysics(),
               itemCount: userData.length,
               itemBuilder: (context, index) {
                 final user = userData[index];
-                
+
                 return ItemTile(user: user);
               },
             );

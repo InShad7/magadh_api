@@ -48,7 +48,7 @@ Future<void> loginUser({context}) async {
     barrierDismissible: false,
     builder: (context) => const Center(
       child:
-          SizedBox(height: 50, width: 50, child: CircularProgressIndicator()),
+          SizedBox(height: 40, width: 40, child: CircularProgressIndicator()),
     ),
   );
   try {
@@ -94,7 +94,7 @@ Future<void> verifyOTP(context) async {
     barrierDismissible: false,
     builder: (context) => const Center(
       child:
-          SizedBox(height: 50, width: 50, child: CircularProgressIndicator()),
+          SizedBox(height: 40, width: 40, child: CircularProgressIndicator()),
     ),
   );
   try {
@@ -117,6 +117,10 @@ Future<void> verifyOTP(context) async {
       print('Verification successful');
       print(jsonDecode(response.body));
     } else {
+      Fluttertoast.showToast(
+        msg: 'Error: ${response.body}',
+        backgroundColor: red,
+      );
       print('Verification failed');
       print('Status code: ${response.statusCode}');
       print('Error: ${response.body}');
@@ -157,12 +161,16 @@ Future<void> getToken(authToken, context) async {
           (route) => false);
       Fluttertoast.showToast(
         msg: 'Logged in successfully',
-        backgroundColor: Colors.green,
+        backgroundColor: green,
       );
       phoneController.clear();
       print('Token retrieval successful');
       print('Token: $token');
     } else {
+      Fluttertoast.showToast(
+        msg: 'Error: ${response.body}',
+        backgroundColor: red,
+      );
       print('Token retrieval failed');
       print('Status code: ${response.statusCode}');
       print('Error: ${response.body}');
@@ -199,9 +207,17 @@ Future<List<User>> getUserList() async {
         myUserList = data;
         return data;
       } else {
+        Fluttertoast.showToast(
+          msg: 'No "users" key found',
+        );
         throw Exception('No "users" key found');
       }
     } else {
+      Fluttertoast.showToast(
+        msg:
+            'Failed to retrieve user list. Status code: ${response.statusCode}',
+        backgroundColor: red,
+      );
       throw Exception(
           'Failed to retrieve user list. Status code: ${response.statusCode}');
     }
@@ -219,7 +235,7 @@ Future<void> createUser(
     barrierDismissible: false,
     builder: (context) => const Center(
       child:
-          SizedBox(height: 50, width: 50, child: CircularProgressIndicator()),
+          SizedBox(height: 40, width: 40, child: CircularProgressIndicator()),
     ),
   );
   SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -346,6 +362,10 @@ Future<void> updateUser(
     );
 
     if (response.statusCode == 200) {
+      Fluttertoast.showToast(
+        msg: 'User updated successfully',
+        backgroundColor: Colors.green,
+      );
       print('User updated successfully');
     } else {
       throw Exception(
