@@ -1,16 +1,19 @@
 # magadh
 
-A new Flutter project.
+A Flutter project using magadh api.
+login with number.
+otp verification.
+get token.
+user listing.
+create user.
+update user.
+get current location fetching.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+https://github.com/InShad7/magadh_api/assets/86614144/4997a215-3608-4e79-91ca-9eeb484ee863
+
+There was a problem facing google map integration, error while payment process and it shows to contact the bank.
+
